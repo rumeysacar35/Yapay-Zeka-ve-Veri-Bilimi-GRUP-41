@@ -105,3 +105,6 @@ Sprint board, Trello üzerinde dört sütun hâlinde yapılandırılmıştır:
 | **Hatice Yalçın**        | Kullanıcı akış diyagramı                                                 |
 | **Mert Can Obalı**       | Kullanıcı akış diyagramı                                                 |
 
+
+## Sprint 2 
+
