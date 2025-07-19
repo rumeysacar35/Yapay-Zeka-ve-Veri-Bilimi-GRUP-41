@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Career Guide</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f1f5f9;
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      color: #1e293b;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.3rem;
+      margin-bottom: 1.5rem;
+      color: #1e40af;
+    }
+
+    .prompt-section {
+      margin-bottom: 1.5rem;
+    }
+
+    .prompt-title {
+      font-weight: bold;
+      margin-bottom: 0.7rem;
+      font-size: 1.2rem;
+      color: #334155;
+    }
+
+    .prompt-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .prompt-button {
+      background-color: #e0e7ff;
+      border: none;
+      border-radius: 8px;
+      padding: 0.6rem 1rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .prompt-button:hover {
+      background-color: #c7d2fe;
+    }
+
+    textarea {
+      width: 100%;
+      height: 130px;
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      resize: vertical;
+      margin-bottom: 1rem;
+    }
+
+    .main-buttons {
+      display: flex;
+      gap: 0.7rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.8rem 1.5rem;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #45a049;
+    }
+
+    .result {
+      margin-top: 1rem;
+      background-color: #f8fafc;
+      border-left: 5px solid #4CAF50;
+      padding: 1.3rem;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      color: #1e293b;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      border-radius: 8px;
+      max-height: 400px;
+      overflow-y: auto;
+      position: relative;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #e2e8f0;
+      border: none;
+      padding: 0.4rem 0.8rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+
+    .copy-btn:hover {
+      background-color: #cbd5e1;
+    }
+
+    .spinner {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border: 3px solid #cbd5e1;
+      border-top: 3px solid #4CAF50;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <h1>AI Career Guide</h1>
+
+  <div class="prompt-section">
+    <div class="prompt-title">🔍 Example Prompts:</div>
+    <div class="prompt-buttons">
+      <button class="prompt-button" onclick="insertPrompt('Create a roadmap for someone who wants to become a data scientist. Include skills to learn, tools to use, and helpful resources.')">Data Scientist</button>
+      <button class="prompt-button" onclick="insertPrompt('Provide a roadmap for someone interested in AI or Machine Learning.')">ML & AI</button>
+      <button class="prompt-button" onclick="insertPrompt('Please suggest a learning path with skills and tools for someone who wants to become a cybersecurity expert.')">Cybersecurity</button>
+      <button class="prompt-button" onclick="insertPrompt('What skills and technologies should I learn if I want to work in game development? Give me a plan.')">Game Dev</button>
+      <button class="prompt-button" onclick="insertPrompt('I want to become a data analyst. What steps should I follow? Include skills, tools, and learning resources.')">Data Analyst</button>
+      <button class="prompt-button" onclick="insertPrompt('Generate a career plan for someone with an interest in health technology.')">HealthTech</button>
+    </div>
+  </div>
+
+  <textarea id="prompt" placeholder="Example: I enjoy math and want to pursue an academic career in mathematics. Please create a career roadmap with skills, degrees, and recommended resources."></textarea>
+
+  <div class="main-buttons">
+    <button class="btn" onclick="generate()">Generate Roadmap</button>
+  </div>
+
+  <div id="result" class="result" style="display:none;">
+    <button class="copy-btn" onclick="copyToClipboard()">Copy</button>
+    <div id="result-text"></div>
+  </div>
+
+  <script>
+    function insertPrompt(text) {
+      document.getElementById("prompt").value = text;
+    }
+
+    async function generate() {
+      const prompt = document.getElementById("prompt").value;
+      const resultBox = document.getElementById("result");
+      const resultText = document.getElementById("result-text");
+
+      resultBox.style.display = "block";
+      resultText.innerHTML = '<span class="spinner"></span>Loading...';
+
+      const response = await fetch("http://127.0.0.1:8000/career", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ prompt: "Türkçe cevap ver. " + prompt })
+      });
+
+      const data = await response.json();
+      resultText.innerHTML = "<strong>📋 Career Roadmap:</strong><br><br>" + data.result;
+    }
+
+    function copyToClipboard() {
+      const text = document.getElementById("result-text").innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.querySelector(".copy-btn");
+        btn.innerText = "Copied!";
+        setTimeout(() => { btn.innerText = "Copy"; }, 1500);
+      });
+    }
+  </script>
+</body>
+</html>
