@@ -109,11 +109,34 @@ Sprint board, Trello üzerinde dört sütun hâlinde yapılandırılmıştır:
 ## Sprint 2 
 
 ## Sprint Hedefi : 
-Toplam planlanan puan --> 100 
+Sprint içinde tamamlanması hedeflenen görevler:
+- Dataset analiz ve ön işleme (20 puan)
+- Rakip analizi dokümanı oluşturma (20 puan)
+- Personaların oluşturulması ve onaylanması (15 puan)
+- Kullanıcı akış diyagramının hazırlanması (15 puan)
+- AI öneri sistemi mantığının belirlenmesi (30 puan)
+Toplam: 100 puan
+
 
  ## Daily Scrum :
-- Daily Scrum toplantıları WhatsApp üzerinden gerrçekleştirilmiştir.
-- Sprint 1'de paylaşılan görevlerin günlük takibi düzenli bir şekilde sağlanmıştır. 
+Sprint 2 sürecinde resmi Daily Scrum toplantıları gerçekleştirilmemiştir.
+Ancak takım üyeleri arasında sürekli iletişim halinde olunmuş ve her üye kendi sorumluluğundaki işleri günlük olarak raporlamıştır.
+
+WhatsApp üzerinden yürütülen yazışmalar yoluyla temel görev takibi sağlanmış, major bir iletişim problemi yaşanmamıştır.
+Sprint 3’te ise, daha disiplinli bir Scrum yapısına geçilerek her gün sabit saatte kısa toplantıların yapılması planlanmaktadır. 
+
+
+## Kullanılacak Datasetler :
+Proje süresince kullanılacak olan veri setleri :  
+1- Job Skill Set Dataset – batuhanmtl (HuggingFace)
+
+2- IT Job Roles, Skills & Certifications Dataset – NxtGenIntern (HuggingFace)
+
+3- Jobs Skill-Based Dataset – ASNVS (HuggingFace)
+
+## Proje Amacı Belgesi
+
+
 
 
 
