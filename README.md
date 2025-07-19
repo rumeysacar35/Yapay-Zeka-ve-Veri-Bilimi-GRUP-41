@@ -108,3 +108,12 @@ Sprint board, Trello üzerinde dört sütun hâlinde yapılandırılmıştır:
 
 ## Sprint 2 
 
+## Sprint Hedefi : 
+Toplam planlanan puan --> 100 
+
+ ## Daily Scrum :
+- Daily Scrum toplantıları WhatsApp üzerinden gerrçekleştirilmiştir.
+- Sprint 1'de paylaşılan görevlerin günlük takibi düzenli bir şekilde sağlanmıştır. 
+
+
+
