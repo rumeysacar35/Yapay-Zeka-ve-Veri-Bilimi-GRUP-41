@@ -197,7 +197,6 @@ Aşağıdaki tablo, benzer hizmetler sunan bazı platformların temel özellikle
 Prompt testi sürecine ait arayüz çıktıları aşağıda yer almaktadır:
 
 #### 🔹 Prompt Yanıtı 1
-![AI Career Guide Prompt 1](./ai_prompt1.jpg)
 
 <p align="center">
   <img src="ai_prompt1.jpg" width="500" alt="AI Career Guide Prompt 1"/>
@@ -205,9 +204,15 @@ Prompt testi sürecine ait arayüz çıktıları aşağıda yer almaktadır:
 
 #### 🔹 Prompt Yanıtı 2
 ![AI Career Guide Prompt 2](./ai_prompt2.jpg)
+<p align="center">
+  <img src="ai_prompt2.jpg" width="500" alt="AI Career Guide Prompt 2"/>
+</p>
 
 #### 🔹 Prompt Yanıtı 3
 ![AI Career Guide Prompt 3](./ai_prompt3.jpg)
+<p align="center">
+  <img src="ai_prompt3.jpg" width="500" alt="AI Career Guide Prompt 3"/>
+</p>
 
 > 📌 Görsellerde yer alan test çıktıları, modelin kullanıcıdan aldığı prompt'a verdiği kariyer yol haritası önerilerini göstermektedir.
 
