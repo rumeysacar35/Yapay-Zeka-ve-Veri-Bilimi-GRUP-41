@@ -124,6 +124,10 @@ Ancak takım üyeleri arasında sürekli iletişim halinde olunmuş ve her üye 
 
 WhatsApp üzerinden yürütülen yazışmalar yoluyla temel görev takibi sağlanmış, major bir iletişim problemi yaşanmamıştır.
 Sprint 3’te ise, daha disiplinli bir Scrum yapısına geçilerek her gün sabit saatte kısa toplantıların yapılması planlanmaktadır. 
+<p align="center">
+  <img src="daily_scrum.jpg" width="500" alt="Daily Scrum"/>
+</p>
+
 
 
 ## Kullanılacak Datasetler :
