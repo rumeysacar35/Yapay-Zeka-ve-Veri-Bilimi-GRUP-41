@@ -203,13 +203,13 @@ Prompt testi sürecine ait arayüz çıktıları aşağıda yer almaktadır:
 </p>
 
 #### 🔹 Prompt Yanıtı 2
-![AI Career Guide Prompt 2](./ai_prompt2.jpg)
+
 <p align="center">
   <img src="ai_prompt2.jpg" width="500" alt="AI Career Guide Prompt 2"/>
 </p>
 
 #### 🔹 Prompt Yanıtı 3
-![AI Career Guide Prompt 3](./ai_prompt3.jpg)
+
 <p align="center">
   <img src="ai_prompt3.jpg" width="500" alt="AI Career Guide Prompt 3"/>
 </p>
