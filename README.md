@@ -146,11 +146,19 @@ Yapay zeka destekli bir kariyer yol haritası platformu geliştirerek, kullanıc
 - [AI Roadmap Proje Amacı Raporu](./AI_Roadmap_Proje_Amacı_Raporu.pdf)
 
 ## Temel Kullanıcı Personaları 
-Elif Yılmaz – 22 yaşında, üniversite son sınıf öğrencisi. Mezuniyet sonrası hangi sertifikaları alması gerektiğini ve nasıl bir kariyer yolu çizmesi gerektiğini bilmek istiyor.
+Elif Yılmaz – 23 yaşında, yeni mezun bir genç. Mezuniyet sonrası hangi sertifikaları alması gerektiğini ve nasıl bir kariyer yolu çizmesi gerektiğini bilmek istiyor.
 
-Mehmet Demir – 35 yaşında, 10 yıllık tecrübeye sahip bir beyaz yaka. Mevcut işinden memnun değil, yazılıma yönelmek istiyor. Uygulamanın sunduğu yeniden eğitim ve pozisyon önerilerine ihtiyaç duyuyor.
+Mehmet Demir – 29 yaşında, 6 yıllık tecrübeye sahip bir beyaz yaka. Mevcut işinden memnun değil, yazılıma yönelmek istiyor. Uygulamanın sunduğu yeniden eğitim ve pozisyon önerilerine ihtiyaç duyuyor.
 
 [Detaylı persona dokümanını buradan inceleyebilirsiniz(PDF)](./Temel_Personalar.pdf)
+
+## Kullanıcı Akış Diyagramı
+
+Bu diyagram, platforma gelen bir kullanıcının yolculuğunu baştan sona kadar adım adım göstermektedir. 
+Kullanıcının sisteme giriş yapmasından, yetenek analizi sonucunda kişiselleştirilmiş bir kariyer yol haritası elde etmesine kadar olan süreci kapsamaktadır.
+
+![Kullanıcı Akış Diyagramı](./Mermaid_Chart.png)
+
 
 
 
