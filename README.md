@@ -161,7 +161,7 @@ Mehmet Demir – 29 yaşında, 6 yıllık tecrübeye sahip bir beyaz yaka. Mevcu
 Bu diyagram, platforma gelen bir kullanıcının yolculuğunu baştan sona kadar adım adım göstermektedir. 
 Kullanıcının sisteme giriş yapmasından, yetenek analizi sonucunda kişiselleştirilmiş bir kariyer yol haritası elde etmesine kadar olan süreci kapsamaktadır.
 
-![Kullanıcı Akış Diyagramı - Mermaid](./mermaid_chart.png)
+![Kullanıcı Akış Diyagramı - Mermaid](./mermaid_char.png)
 
 ## Rakip Analizi
 
