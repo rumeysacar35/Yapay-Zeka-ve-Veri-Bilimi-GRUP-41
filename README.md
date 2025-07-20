@@ -172,6 +172,42 @@ Aşağıdaki tablo, benzer hizmetler sunan bazı platformların temel özellikle
 
 📄 [Detaylı Rakip Analizi Dokümanını Görüntüle (PDF)](./competitive_analysis.pdf)
 
+## Model Entegrasyonu ve Test Süreci
+
+### Kullanılan AI Modeli
+- **Model Adı:** [MBZUAI / LaMini-Flan-T5-248M](https://huggingface.co/MBZUAI/LaMini-Flan-T5-248M)
+- **Platform:** Hugging Face
+- **Model Türü:** Prompt tabanlı metin üretimi (text2text generation)
+- **Dil Desteği:** İngilizce (Türkçe destek için entegrasyon çalışmaları planlanıyor)
+
+### 📚 Kullanılan Kütüphaneler
+- `fastapi`
+- `uvicorn`
+- `transformers`
+- `torch`
+
+### Test Süreci ve Gözlemler
+- Proje için örnek promptlarla test gerçekleştirilmiştir.
+- İngilizce promptlarla oldukça anlamlı ve görev odaklı çıktılar alınmıştır.
+- Türkçe dil desteği için modelin uygunluğu test edilecek ve gerekiyorsa yeni modeller eklenecektir.
+- Prompt tasarımında açıklık ve bağlamsallık, model yanıt kalitesini doğrudan etkilemektedir.
+
+### 📷 Uygulama Arayüzünden Görseller
+
+Prompt testi sürecine ait arayüz çıktıları aşağıda yer almaktadır:
+
+#### 🔹 Prompt Yanıtı 1
+![AI Career Guide Prompt 1](./ai_prompt1.jpg)
+
+#### 🔹 Prompt Yanıtı 2
+![AI Career Guide Prompt 2](./ai_prompt2.jpg)
+
+#### 🔹 Prompt Yanıtı 3
+![AI Career Guide Prompt 3](./ai_prompt3.jpg)
+
+> 📌 Görsellerde yer alan test çıktıları, modelin kullanıcıdan aldığı prompt'a verdiği kariyer yol haritası önerilerini göstermektedir.
+
+
 
 
 
