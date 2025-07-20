@@ -134,7 +134,14 @@ Proje süresince kullanılacak olan veri setleri :
 
 3- Jobs Skill-Based Dataset – ASNVS (HuggingFace)
 
-## Proje Amacı Belgesi
+
+
+## Proje Amacı:
+Yapay zeka destekli bir kariyer yol haritası platformu geliştirerek, kullanıcının yeteneklerine ve hedeflerine göre eğitim, sertifika ve pozisyon önerileri sunmak.
+(Ayrıntılar için bkz: Proje Amacı Belgesi)
+## 📄 Proje Dokümanları
+
+- [AI Roadmap Proje Amacı Raporu (PDF)](./AI_Roadmap_Proje_Amacı_Raporu.pdf)
 
 
 
