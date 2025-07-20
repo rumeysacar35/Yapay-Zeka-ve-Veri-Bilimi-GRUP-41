@@ -129,15 +129,15 @@ Sprint 3’te ise, daha disiplinli bir Scrum yapısına geçilerek her gün sabi
 ## Kullanılacak Datasetler :
 Proje süresince kullanılacak olan veri setleri :  
 1- Job Skill Set Dataset – batuhanmtl (HuggingFace)
-[Link Başlığı](https://huggingface.co/datasets/ASNVS/jobs_skill_based)
+[1- Job Skill Set Dataset – batuhanmtl (HuggingFace)](https://huggingface.co/datasets/ASNVS/jobs_skill_based)
 
 
 2- IT Job Roles, Skills & Certifications Dataset – NxtGenIntern (HuggingFace)
-[Link Başlığı](https://huggingface.co/datasets/NxtGenIntern/IT_Job_Roles_Skills_Certifications_Dataset)
+[2- IT Job Roles, Skills & Certifications Dataset – NxtGenIntern (HuggingFace)](https://huggingface.co/datasets/NxtGenIntern/IT_Job_Roles_Skills_Certifications_Dataset)
 
 
 3- Jobs Skill-Based Dataset – ASNVS (HuggingFace)
-[Link Başlığı](https://huggingface.co/datasets/batuhanmtl/job-skill-set)
+[3- Jobs Skill-Based Dataset – ASNVS (HuggingFace)](https://huggingface.co/datasets/batuhanmtl/job-skill-set)
 
 
 
