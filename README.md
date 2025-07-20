@@ -159,6 +159,18 @@ Kullanıcının sisteme giriş yapmasından, yetenek analizi sonucunda kişisell
 
 ![Kullanıcı Akış Diyagramı](./mermaid_chart.png)
 
+## Rakip Analizi
+
+Aşağıdaki tablo, benzer hizmetler sunan bazı platformların temel özelliklerini ve bizim çözümümüzden farklarını özetlemektedir:
+
+| Platform                        | Güçlü Yönleri                                              | Eksikleri / Sınırları                                       | AI Roadmap Farkı                             |
+|----------------------------------|------------------------------------------------------------|-------------------------------------------------------------|----------------------------------------------|
+| **LinkedIn Career Explorer**     | Kariyer geçiş haritası                                     | Eğitim/sınav entegrasyonu yok                              | AI ile yönlendirme + eğitim eşleşmesi       |
+| **Rezi**                         | AI destekli CV oluşturma                                   | Yol haritası veya analiz sistemi yok                       | Yetkinlik analizi + yol haritası sunuyor    |
+| **Google Career Pathways**       | Sertifikalı eğitim, Google onaylı içerikler                | Kişiye özel yönlendirme zayıf                              | AI ile bireysel plan oluşturuyor            |
+| **Jobiri**                       | CV & mülakat koçluğu, iş başvuru desteği                   | AI entegrasyonu sınırlı, roadmap mantığı yok               | Kapsayıcı, AI tabanlı yönlendirme sağlıyor  |
+
+
 
 
 
