@@ -140,10 +140,17 @@ Proje süresince kullanılacak olan veri setleri :
 
 ## Proje Amacı:
 Yapay zeka destekli bir kariyer yol haritası platformu geliştirerek, kullanıcının yeteneklerine ve hedeflerine göre eğitim, sertifika ve pozisyon önerileri sunmak.
-(Ayrıntılar için bkz: Proje Amacı Belgesi)
+(Ayrıntılar için bkz: AI Roadmap Proje Amacı Raporu)
 ## 📄 Proje Dokümanları
 
-- [AI Roadmap Proje Amacı Raporu (PDF)](./AI_Roadmap_Proje_Amacı_Raporu.pdf)
+- [AI Roadmap Proje Amacı Raporu](./AI_Roadmap_Proje_Amacı_Raporu.pdf)
+
+## Temel Kullanıcı Personaları 
+Elif Yılmaz – 22 yaşında, üniversite son sınıf öğrencisi. Mezuniyet sonrası hangi sertifikaları alması gerektiğini ve nasıl bir kariyer yolu çizmesi gerektiğini bilmek istiyor.
+
+Mehmet Demir – 35 yaşında, 10 yıllık tecrübeye sahip bir beyaz yaka. Mevcut işinden memnun değil, yazılıma yönelmek istiyor. Uygulamanın sunduğu yeniden eğitim ve pozisyon önerilerine ihtiyaç duyuyor.
+
+[Detaylı persona dokümanını buradan inceleyebilirsiniz(PDF)](./Temel_Personalar.pdf)
 
 
 
