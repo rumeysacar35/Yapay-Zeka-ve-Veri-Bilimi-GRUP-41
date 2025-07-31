@@ -21,6 +21,11 @@
       color: #1e40af;
     }
 
+    label, select {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
     .prompt-section {
       margin-bottom: 1.5rem;
     }
@@ -69,6 +74,7 @@
       display: flex;
       gap: 0.7rem;
       flex-wrap: wrap;
+      margin-bottom: 1rem;
     }
 
     .btn {
@@ -99,102 +105,161 @@
       border-radius: 8px;
       max-height: 400px;
       overflow-y: auto;
-      position: relative;
-    }
-
-    .copy-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: #e2e8f0;
-      border: none;
-      padding: 0.4rem 0.8rem;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 0.85rem;
-    }
-
-    .copy-btn:hover {
-      background-color: #cbd5e1;
-    }
-
-    .spinner {
-      display: inline-block;
-      width: 18px;
-      height: 18px;
-      border: 3px solid #cbd5e1;
-      border-top: 3px solid #4CAF50;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-      margin-right: 0.5rem;
-      vertical-align: middle;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
     }
   </style>
 </head>
 <body>
-  <h1>AI Career Guide</h1>
+  <h1 id="title">AI Career Guide</h1>
+
+  <label for="language-select" id="lang-label">Dil seçiniz:</label>
+  <select id="language-select" onchange="changeLanguage()">
+    <option value="tr" selected>Türkçe</option>
+    <option value="en">English</option>
+  </select>
 
   <div class="prompt-section">
-    <div class="prompt-title">🔍 Example Prompts:</div>
-    <div class="prompt-buttons">
-      <button class="prompt-button" onclick="insertPrompt('Create a roadmap for someone who wants to become a data scientist. Include skills to learn, tools to use, and helpful resources.')">Data Scientist</button>
-      <button class="prompt-button" onclick="insertPrompt('Provide a roadmap for someone interested in AI or Machine Learning.')">ML & AI</button>
-      <button class="prompt-button" onclick="insertPrompt('Please suggest a learning path with skills and tools for someone who wants to become a cybersecurity expert.')">Cybersecurity</button>
-      <button class="prompt-button" onclick="insertPrompt('What skills and technologies should I learn if I want to work in game development? Give me a plan.')">Game Dev</button>
-      <button class="prompt-button" onclick="insertPrompt('I want to become a data analyst. What steps should I follow? Include skills, tools, and learning resources.')">Data Analyst</button>
-      <button class="prompt-button" onclick="insertPrompt('Generate a career plan for someone with an interest in health technology.')">HealthTech</button>
+    <div class="prompt-title" id="example-title">🔍 Örnek Başlıklar:</div>
+    <div class="prompt-buttons" id="prompt-buttons">
+      <!-- Butonlar burada dinamik eklenecek -->
     </div>
   </div>
 
-  <textarea id="prompt" placeholder="Example: I enjoy math and want to pursue an academic career in mathematics. Please create a career roadmap with skills, degrees, and recommended resources."></textarea>
+  <textarea id="prompt" placeholder=""></textarea>
 
   <div class="main-buttons">
-    <button class="btn" onclick="generate()">Generate Roadmap</button>
+    <button class="btn" onclick="generateCareerPath()" id="generate-btn">Gönder</button>
+    <button id="copy-btn" onclick="copyToClipboard()" style="display: none;">Kopyala</button>
+
   </div>
 
-  <div id="result" class="result" style="display:none;">
-    <button class="copy-btn" onclick="copyToClipboard()">Copy</button>
-    <div id="result-text"></div>
-  </div>
+  <div id="result-text" class="result"></div>
 
   <script>
+    const texts = {
+      tr: {
+        title: "AI Kariyer Rehberi",
+        langLabel: "Dil seçiniz:",
+        placeholder: "Kariyer hedefinizi buraya yazın...",
+        button: "Gönder",
+        loading: "Yükleniyor...",
+        error: "Sunucudan cevap alınamadı.",
+        resultLabel: "📋 Kariyer Yol Haritası:",
+        copy: "Kopyala",       
+        copied: "Kopyalandı!",
+        examples: [
+          { label: "Veri Bilimci", text: "Bir veri bilimcisi olmak isteyen biri için bir yol haritası oluştur. Öğrenilmesi gereken beceriler, kullanılacak araçlar ve kaynaklar dahil olsun." },
+          { label: "Makine Öğrenmesi", text: "Yapay zeka veya makine öğrenmesiyle ilgilenen birisi için kariyer planı öner." },
+          { label: "Siber Güvenlik", text: "Bir siber güvenlik uzmanı olmak isteyen biri için gerekli becerilerle bir yol haritası hazırla." },
+          { label: "Oyun Geliştirme", text: "Oyun geliştirme alanında çalışmak isteyen biri için öğrenilmesi gereken teknolojileri ve becerileri planla." },
+          { label: "Veri Analisti", text: "Bir veri analisti olmak için izlenmesi gereken adımları içeren bir plan oluştur." },
+          { label: "Sağlık Teknolojisi", text: "Sağlık teknolojilerine ilgi duyan biri için kariyer planı oluştur." }
+        ]
+      },
+      en: {
+        title: "AI Career Guide",
+        langLabel: "Select language:",
+        placeholder: "Write your career goal here...",
+        button: "Submit",
+        loading: "Loading...",
+        error: "Failed to get response from server.",
+        resultLabel: "📋 Career Roadmap:",
+        copy: "Copy",         
+        copied: "Copied!",  
+        examples: [
+          { label: "Data Scientist", text: "Create a roadmap for someone who wants to become a data scientist. Include skills to learn, tools to use, and helpful resources." },
+          { label: "ML & AI", text: "Provide a roadmap for someone interested in AI or Machine Learning." },
+          { label: "Cybersecurity", text: "Please suggest a learning path with skills and tools for someone who wants to become a cybersecurity expert." },
+          { label: "Game Dev", text: "What skills and technologies should I learn if I want to work in game development? Give me a plan." },
+          { label: "Data Analyst", text: "I want to become a data analyst. What steps should I follow? Include skills, tools, and learning resources." },
+          { label: "HealthTech", text: "Generate a career plan for someone with an interest in health technology." }
+        ]
+      }
+    };
+
     function insertPrompt(text) {
       document.getElementById("prompt").value = text;
     }
 
-    async function generate() {
-      const prompt = document.getElementById("prompt").value;
-      const resultBox = document.getElementById("result");
-      const resultText = document.getElementById("result-text");
+    function changeLanguage() {
+      const lang = document.getElementById("language-select").value;
+      document.getElementById("title").innerText = texts[lang].title;
+      document.getElementById("lang-label").innerText = texts[lang].langLabel;
+      document.getElementById("prompt").placeholder = texts[lang].placeholder;
+      document.getElementById("generate-btn").innerText = texts[lang].button;
+      document.getElementById("example-title").innerText = lang === "tr" ? "🔍 Örnek Başlıklar:" : "🔍 Example Prompts:";
+      document.getElementById("result-text").innerText = "";
 
-      resultBox.style.display = "block";
-      resultText.innerHTML = '<span class="spinner"></span>Loading...';
-
-      const response = await fetch("http://127.0.0.1:8000/career", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ prompt: "Türkçe cevap ver. " + prompt })
+      const promptButtons = document.getElementById("prompt-buttons");
+      promptButtons.innerHTML = "";
+      texts[lang].examples.forEach(example => {
+        const button = document.createElement("button");
+        button.className = "prompt-button";
+        button.innerText = example.label;
+        button.onclick = () => insertPrompt(example.text);
+        promptButtons.appendChild(button);
       });
+      document.getElementById("copy-btn").innerText = texts[lang].copy;
 
-      const data = await response.json();
-      resultText.innerHTML = "<strong>📋 Career Roadmap:</strong><br><br>" + data.result;
+    }
+
+    async function generateCareerPath() {
+      const lang = document.getElementById("language-select").value;
+      const promptInput = document.getElementById("prompt").value;
+      const resultBox = document.getElementById("result-text");
+      const copyBtn = document.getElementById("copy-btn"); 
+
+      if (!promptInput.trim()) {
+        resultBox.innerText = lang === "tr" ? "Lütfen bir metin girin." : "Please enter some text.";
+        return;
+      }
+
+      resultBox.innerText = texts[lang].loading;
+
+      try {
+        const response = await fetch("http://127.0.0.1:8000/career", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            prompt: lang === "tr" ? "Türkçe cevap ver. " + promptInput : promptInput,
+            lang: lang
+          })
+        });
+
+        if (!response.ok) {
+          resultBox.innerText = texts[lang].error;
+          copyBtn.style.display = "none";
+          return;
+        }
+
+        const data = await response.json();
+        resultBox.innerHTML = `<strong>${texts[lang].resultLabel}</strong><br><br>${data.result}`;
+        const copyBtn = document.getElementById("copy-btn");
+copyBtn.innerText = texts[lang].copy;
+copyBtn.style.display = "inline-block";
+
+      } catch (error) {
+        resultBox.innerText = texts[lang].error;
+        console.error(error);
+        copyBtn.style.display = "none";
+      }
     }
 
     function copyToClipboard() {
       const text = document.getElementById("result-text").innerText;
+      const lang = document.getElementById("language-select").value;
+      const btn = document.getElementById("copy-btn");
+
       navigator.clipboard.writeText(text).then(() => {
-        const btn = document.querySelector(".copy-btn");
-        btn.innerText = "Copied!";
-        setTimeout(() => { btn.innerText = "Copy"; }, 1500);
+        btn.innerText = texts[lang].copied;
+        setTimeout(() => {
+          btn.innerText = texts[lang].copy;
+        }, 1500);
       });
     }
+
+    window.onload = () => changeLanguage();
   </script>
 </body>
 </html>
