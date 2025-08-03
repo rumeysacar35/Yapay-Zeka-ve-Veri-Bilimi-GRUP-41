@@ -263,6 +263,31 @@ Toplantının planlaması WhatsApp grubu üzerinden yapılmış ve tüm ekip üy
 
 📄 [Sprint 3 Toplantı Planlaması – WhatsApp Görüntüsü (PDF)](./sprint3_whatsapp.pdf)
 
+### 📌 Sprint 3 Değerlendirmesi ve Proje Kapanışı
+
+Sprint 3, projenin tamamlandığı ve teslim edilebilir seviyeye geldiği son sprinttir. Bu sprintte:
+
+- AI modeli çift dilli destekle entegre edilmiştir.
+- Prompt çıktıları görselleştirilmiş ve kullanıcıyla eşleşecek hale getirilmiştir.
+- Demo videosu hazırlanmış ve belgeler tamamlanmıştır.
+
+Proje artık teknik olarak çalışır, sunulabilir ve belgeleriyle teslim edilebilir durumdadır.
+---
+
+### 📦 Teslim Edilen Proje Dosyaları
+
+| Dosya Adı | Açıklama |
+|-----------|----------|
+| `AI_Roadmap_Proje_Amacı_Raporu.pdf` | Proje vizyonu ve genel amaç belgesi |
+| `Temel_Personalar.pdf` | Kullanıcı persona tanımları |
+| `competitive_analysis.pdf` | Rakip analizlerinin detaylı sunumu |
+| `mermaid_chart.png` | Kullanıcı akış diyagramı |
+| `ai_prompt1.jpg`, `ai_prompt2.jpg`, `ai_prompt3.jpg` | AI model çıktılarının örnek görselleri |
+| `sprint3_meet.jpg` | Ekip içi Sprint 3 toplantı ekran görüntüsü |
+| `sprint3_whatsapp.pdf` | Toplantı planlamasının WhatsApp üzerinden yürütülüşüne ait belge |
+| `proje_tanitim_videosu.mp4` | Projenin tanıtım ve demo videosu |
+| `README.md` | Proje süreci ve çıktılarının tamamını içeren ana dökümantasyon |
+
 
 
 
