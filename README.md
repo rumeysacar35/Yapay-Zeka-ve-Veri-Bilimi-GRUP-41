@@ -261,13 +261,7 @@ Toplantının planlaması WhatsApp grubu üzerinden yapılmış ve tüm ekip üy
 </p>
 
 
-
----
-#### 💬 Toplantı Planlaması – WhatsApp Görüntüsü:
-
-![Sprint 3 Toplantı Planlaması](./sprint3_whatsapp.pdf)
-
-> Bu toplantıda model çıktılarının dil kontrolü, tanıtım videosu süreci ve proje dökümantasyonu ele alınmıştır.
+📄 [Sprint 3 Toplantı Planlaması – WhatsApp Görüntüsü (PDF)](./sprint3_whatsapp.pdf)
 
 
 
