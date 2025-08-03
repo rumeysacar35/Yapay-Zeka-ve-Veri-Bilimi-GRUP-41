@@ -239,6 +239,33 @@ Sprint 3 sürecinde, projenin temel yapay zeka motoru geliştirilmiş; dil deste
 
 **Toplam:** 100 puan
 
+### 🤝 Sprint 3 Takım İletişimi ve Toplantı Kayıtları
+
+Sprint 3 sürecinde ekip, hem teknik geliştirmeleri değerlendirmek hem de kalan görevlerin paylaşımını planlamak üzere bir Google Meet toplantısı gerçekleştirmiştir.  
+Toplantının planlaması WhatsApp grubu üzerinden yapılmış ve tüm ekip üyeleri katılım göstermiştir.
+
+#### 📆 Toplantı Tarihi: 25 Temmuz 2025  
+#### 🕓 Saat: 21.00  
+#### 💬 Katılımcılar:
+- Rumeysa Acar
+- Zehra Nur Öztürk
+- Hatice Yalçın
+- Mert Can Obalı
+- Muhammed Selim Özlen
+
+---
+
+#### 🖥️ Toplantı Görüntüsü:
+
+![Sprint 3 Google Meet Toplantısı](./sprint3_meet.jpg)
+
+---
+#### 💬 Toplantı Planlaması – WhatsApp Görüntüsü:
+
+![Sprint 3 Toplantı Planlaması](./sprint3_whatsapp.pdf)
+
+> Bu toplantıda model çıktılarının dil kontrolü, tanıtım videosu süreci ve proje dökümantasyonu ele alınmıştır.
+
 
 
 
