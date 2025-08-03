@@ -274,20 +274,8 @@ Sprint 3, projenin tamamlandığı ve teslim edilebilir seviyeye geldiği son sp
 Proje artık teknik olarak çalışır, sunulabilir ve belgeleriyle teslim edilebilir durumdadır.
 ---
 
-### 📦 Teslim Edilen Proje Dosyaları
-
-| Dosya Adı | Açıklama |
-|-----------|----------|
-| `AI_Roadmap_Proje_Amacı_Raporu.pdf` | Proje vizyonu ve genel amaç belgesi |
-| `Temel_Personalar.pdf` | Kullanıcı persona tanımları |
-| `competitive_analysis.pdf` | Rakip analizlerinin detaylı sunumu |
-| `mermaid_chart.png` | Kullanıcı akış diyagramı |
-| `ai_prompt1.jpg`, `ai_prompt2.jpg`, `ai_prompt3.jpg` | AI model çıktılarının örnek görselleri |
-| `sprint3_meet.jpg` | Ekip içi Sprint 3 toplantı ekran görüntüsü |
-| `sprint3_whatsapp.pdf` | Toplantı planlamasının WhatsApp üzerinden yürütülüşüne ait belge |
-| `proje_tanitim_videosu.mp4` | Projenin tanıtım ve demo videosu |
-| `README.md` | Proje süreci ve çıktılarının tamamını içeren ana dökümantasyon |
-
+> 📎 Not: Tüm görseller ve belgeler, ilgili sprint bölümleri içinde yerlerine entegre edilmiştir.  
+Ayrıca README yapısında da bağlantılarla sunulmuştur. Bu nedenle ayrı bir dosya listesine ihtiyaç duyulmamıştır.
 
 
 
