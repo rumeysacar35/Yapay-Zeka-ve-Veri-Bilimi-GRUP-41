@@ -220,7 +220,24 @@ Prompt testi sürecine ait arayüz çıktıları aşağıda yer almaktadır:
 
 > 📌 Görsellerde yer alan test çıktıları, modelin kullanıcıdan aldığı prompt'a verdiği kariyer yol haritası önerilerini göstermektedir.
 
+## 🚀 Sprint 3 Raporu
 
+### Sprint Hedefi
+Sprint 3 sürecinde, projenin temel yapay zeka motoru geliştirilmiş; dil desteği genişletilerek hem Türkçe hem İngilizce promptlarla çalışabilen bir sistem haline getirilmiştir. Ayrıca proje çıktılarının daha iyi anlaşılması için tanıtım videosu hazırlanmış ve seslendirme süreci tamamlanmıştır.
+
+**Toplam Tamamlanan Puan:** 100 puan
+
+---
+### 🧠 Tamamlanan Görevler
+
+| Görev | Açıklama | Puan |
+|-------|----------|------|
+| AI modeli çok dilli hale getirme | Prompt yapısı Türkçe & İngilizce olacak şekilde güncellendi | 25 |
+| Model çıktılarının iyileştirilmesi | Yanıtlarda netlik ve eğitim-pozisyon eşleşmesi geliştirildi | 25 |
+| Proje tanıtım videosu hazırlanması | Uygulama sürecini anlatan bir demo video çekildi ve seslendirildi | 25 |
+| README ve dökümantasyon güncellemesi | Tüm çıktılar belgeye işlendi | 25 |
+
+**Toplam:** 100 puan
 
 
 
