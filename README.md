@@ -256,8 +256,11 @@ Toplantının planlaması WhatsApp grubu üzerinden yapılmış ve tüm ekip üy
 ---
 
 #### 🖥️ Toplantı Görüntüsü:
+<p align="center">
+  <img src="sprint3_meet.jpg" width="500" alt="Daily Scrum"/>
+</p>
 
-![Sprint 3 Google Meet Toplantısı](./sprint3_meet.jpg)
+
 
 ---
 #### 💬 Toplantı Planlaması – WhatsApp Görüntüsü:
